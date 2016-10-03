@@ -35,7 +35,7 @@ Schemas.ClassesToOffer = new SimpleSchema({
 	},
 	arrivalTime: {
 		type: String, 
-		label: "Time teacher is expected to arrive at school"
+		label: "Time teacher is expected to arrive at school",
 		max: 200
 	},
 	classStart: {
