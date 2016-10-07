@@ -1,13 +1,12 @@
-ClassesToOffers = new Mongo.Collection("classesToOffers");
+/*collection and schema set up*/
 
-var Schemas = {};
-
-Schemas.ClassesToOffer = new SimpleSchema({
+Classes = new Mongo.Collection("classes");
+Classes.attachSchema(new SimpleSchema({
 	author: {
 		type: String,
 		label: "Author",
 		autoValue: function() {
-			return this.UserId
+			return this.userId
 		},
 		autoform: {
 			type: "hidden"
@@ -45,9 +44,14 @@ Schemas.ClassesToOffer = new SimpleSchema({
 	},
 	coTeacher: {
 		type: String,
-		label: "Please be descriptive about level of co-teacher involvement",
+		label: "Please describe the level of co-teacher involvement",
 		max: 500
 	}
-});
+}));
 
-ClassesToOffers.attachSchema(Schemas.ClassesToOffer); 
+/*rules*/
+Classes.allow({
+	insert: function(userId, doc) {
+		return !!userId;
+	}
+});
