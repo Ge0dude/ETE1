@@ -1,5 +1,8 @@
 /*collection and schema set up*/
 
+/*should add a school section and use that as a filter, only allow the entry of one of the 8 branches
+maybe even make it a drop down in stead of enter*/
+
 Classes = new Mongo.Collection("classes");
 Classes.attachSchema(new SimpleSchema({
 	author: {
@@ -42,11 +45,16 @@ Classes.attachSchema(new SimpleSchema({
 		label: "Time class begins",
 		max: 50
 	},
-	coTeacher: {
+	classLength: {
 		type: String,
-		label: "Please describe the level of co-teacher involvement",
-		max: 500
-	}
+		label: "Length of class time",
+		max: 50
+	},
+	subDate: {
+		type: String,
+		label: "Date a substitute is needed",
+		max: 50
+	}	
 }));
 
 /*rules*/

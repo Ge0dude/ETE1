@@ -1,3 +1,8 @@
 <template name="AddClassLayout">
-	{{> quickForm collection="Classes" id="AddClassLayout" type="insert"}}
+	{{> AddClassForm}}
+		<section class="classes">
+		{{#each classes}}
+			{{> ClassDisp}}
+		{{/each}}
+	</section>
 </template>
