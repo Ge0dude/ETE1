@@ -15,6 +15,14 @@ Classes.attachSchema(new SimpleSchema({
 			type: "hidden"
 		}
 	},
+	listed: {
+		type: Boolean,
+		defaultValue: false,
+		optional: true,
+		autoform: {
+			type: "hidden"
+		}
+	},
 	postingTime: {
 		type: Date, 
 		label: "Posted At",
@@ -54,12 +62,28 @@ Classes.attachSchema(new SimpleSchema({
 		type: String,
 		label: "Columbia branch name",
 		max: 25
-	}	
+	},	
 }));
 
 /*rules*/
+/*eventually need this to be Elisa only, not just any ID. Or 
+I could controll who visits this page via Id
+*/
 Classes.allow({
-	insert: function(userId, doc) {
+	insert: function(userId, doc) {       
 		return !!userId;
+	},
+	update: function(userId, doc) {
+		return !!userId;
+	}
+});
+
+Meteor.methods({
+	toggleListingItem: function(id, currentState) {
+		Classes.update(id, {
+			$set: {
+				listed: !currentState //why not just label true?
+			}
+		});
 	}
 });
