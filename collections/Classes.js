@@ -50,10 +50,10 @@ Classes.attachSchema(new SimpleSchema({
 		label: "Length of class time",
 		max: 50
 	},
-	subDate: {
+	branch: {
 		type: String,
-		label: "Date a substitute is needed",
-		max: 50
+		label: "Columbia branch name",
+		max: 25
 	}	
 }));
 

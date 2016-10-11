@@ -1,7 +1,20 @@
+<!--
+Not using as of right now
+-->
+
+
+
+
 <template name="CurrentClasses">
-	<section class="classes">
-		{{#each classes}}
-			{{> ClassDisp}}
-		{{/each}}
-	</section>
+		<section class="classes">
+		{{#if Template.subscriptionsReady}}
+			{{#each classes}}
+				{{> ClassDisp}}
+			{{/each}}
+		{{else}}
+			<h1> Loading <br>
+			Please wait while our servers do their thing :) </h1>
+		{{/if}}		
+		</section>
 </template>
+

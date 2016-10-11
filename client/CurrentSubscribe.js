@@ -1,4 +1,5 @@
-/*
+/* switiching to CurrentClass... I hope */
+
 Template.CurrentClasses.onCreated(function() {
 	var self = this;
 	self.autorun(function() {
@@ -12,11 +13,9 @@ Template.CurrentClasses.helpers({
 	}
 });
 
-*/
 
-/* this is all going to current-classes now
-
-Template.AddClassLayout.onCreated(function() {
+/*
+Template.CurrentClasses.onCreated(function() {
 	var self = this;
 	self.autorun(function() {
 		self.subscribe('classes');
@@ -24,9 +23,10 @@ Template.AddClassLayout.onCreated(function() {
 });
 
 
-Template.AddClassLayout.helpers({
-	classes: ()=> {
-		return Classes.find({});
+Template.SingleClass.helpers({
+	class: ()=> {
+		var id = FlowRouter.getParam('id');
+		return Classes.findOne({_id: id});
 	}
 });
 
