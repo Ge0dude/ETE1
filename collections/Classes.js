@@ -3,6 +3,11 @@
 /*should add a school section and use that as a filter, only allow the entry of one of the 8 branches
 maybe even make it a drop down in stead of enter*/
 
+/*
+Can have a sub date value that is hidden when collection entry is created but can be later changed with
+an autoform? 
+*/
+
 Classes = new Mongo.Collection("classes");
 Classes.attachSchema(new SimpleSchema({
 	author: {
@@ -62,8 +67,15 @@ Classes.attachSchema(new SimpleSchema({
 		type: String,
 		label: "Columbia branch name",
 		max: 25
-	},	
+	},
+	dateNeeded: {
+		type: Date,
+		label: "Date to sub"
+	},
 }));
+
+/*using this dateNeeded means I'm going back to the original format. This
+should have more overlap with selling the app to others schools */
 
 /*rules*/
 /*eventually need this to be Elisa only, not just any ID. Or 
