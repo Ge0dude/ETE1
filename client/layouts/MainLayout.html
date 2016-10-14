@@ -1,7 +1,16 @@
+<!-- Don't forget to move on to User Accounts in Meteor to handle user view vs Admin later on -->
+
 <template name="MainLayout">
 	{{> Header}}
 	{{> SideNav}}
 	<main class="main-layout">
 		{{> Template.dynamic template=main}} 
+		<div class="disclaimer">
+			<!-- I like the idea but it doesn't look good. Can rethink in the future.
+			<h4> This application is only to be used to apply for substitution positions. It should not
+			be used to apply for time off or communicate with Head Office about matters
+			regarding time off. Please follow proper branch protocol for requesting time off. </h4>
+			-->
+		</div>
 	</main>
 </template>

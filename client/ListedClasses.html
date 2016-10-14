@@ -4,6 +4,10 @@
 	<h1 class="page-title">Classes that Need a Substitute</h1>
 	{{#each classes}}
 		{{> ListedClass}}
+	{{else}}
+		<div class="no-listed-classes">
+			<h3>No classes are listed at this time</h3>
+		</div>	
 	{{/each}}
 </template>
 
