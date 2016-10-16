@@ -97,5 +97,8 @@ Meteor.methods({
 				listed: !currentState //why not just label true?
 			}
 		});
+	},
+	deleteClass: function(id) {
+		Classes.remove(id);
 	}
 });

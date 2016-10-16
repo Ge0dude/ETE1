@@ -1,13 +1,13 @@
 <template name="ClassDisp">
 	<article class="classDisp {{#if listed}}in-menu{{/if}} ">
 		<h3>Class Name: " {{className}} "</h3>
-		<p> <b> Branch: </b> {{branch}} </p>
-		<!-- don't think I need this much space taken up 
+		<p> <b> Branch: </b> {{branch}} </p> 
 		<p> Arrival Time: {{arrivalTime}} </p>
 		<p> Class Start Time: {{classStart}} </p>
 		<p> Class Duration:  {{classLength}} </p>
 		<p> Class Size: {{classSize}} </p>
-		-->
+		<i class="fa fa-trash"></i>
+		
 		<!--<a href="/classDisp/{{_id}}">List Class for Subs</a> --> <!-- dont need this as of now-->
 		<button class="btn-primary toggle-menu"> Request a sub </button> <!--eventually change toggle menu to my own name and CSS-->
 		<button class= "btn-deny toggle-menu"> Close listing </button>
