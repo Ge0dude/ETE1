@@ -30,8 +30,10 @@ fortawesome:fontawesome
 spiderable
 fastclick
 raix:handlebar-helpers
+accounts-base
 accounts-ui
 accounts-password
+useraccounts:unstyled
 matb33:bootstrap-glyphicons
 zimme:active-route
 gwendall:auth-client-callbacks
