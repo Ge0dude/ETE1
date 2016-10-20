@@ -209,6 +209,10 @@ p
             opacity 1
             shadow-level(2)
             border-color @background
+    &.logout-button
+        position absolute
+        right 0
+        color #FCB514
 
 input, select, textarea
     color purp
@@ -347,10 +351,6 @@ input, select, textarea
         &:hover
             color red 
             opacity 1
-    .ingredient
-        display inline-block
-        margin-right 10px 
-        font-size 1.2em 
     &:hover 
         shadow-level(3)
         // animation card 0.6s ease 1 forwards
@@ -382,13 +382,6 @@ input, select, textarea
         border-top 1px solid light-grey
         & + li 
             border-top none
-
-.login-buttons-dropdown-align-
-    #login-dropdown-list
-        right 0
-        left auto 
-        a 
-            color dark-purp
 
 .no-listed-classes
     @extend .classDisp

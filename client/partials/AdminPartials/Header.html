@@ -1,9 +1,17 @@
-<!-- Can I build this into the MainNav component?  -->
+<!-- Can I build this into the MainNav component? 
+This form of header can't be used on the home page then -->
 
 <template name="Header">
 	<header>
 	<h1>Columbia English Sub Network</h1>
 	{{> LoginModal}}
+	<ul>
+		{{#if currentUser}}
+			<button class="logout-button"><li class="logout">Logout</li></button>
+		{{else}}	
+			<li class="login-toggle">Login/Sign-up</li>
+		{{/if}}
+	</ul>
 	</header>
 </template>
 	
