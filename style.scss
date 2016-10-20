@@ -77,26 +77,6 @@ input[type="password"] {
 }
 
 
-.header {
-    background: white;
-    border-bottom: 1px solid $dgrey;
-    color: $text;
-    position: relative;
-    z-index: 10;
-    height: 60px;
-    padding: 5px 5%;
-    display: flex;
-    justify-content: space-between;
-    @include card(1);
-    a {
-        color: $text;
-    }
-    .site-title {
-        line-height: 0;
-        margin: 0;
-    }
-}
-
 
 .main-nav {
     ul {

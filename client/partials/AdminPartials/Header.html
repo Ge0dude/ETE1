@@ -3,15 +3,17 @@ This form of header can't be used on the home page then -->
 
 <template name="Header">
 	<header>
-	<h1>Columbia English Sub Network</h1>
+	<h1>Columbia English <br> Sub Network</h1>
 	{{> LoginModal}}
 	<ul>
 		{{#if currentUser}}
-			<button class="logout-button"><li class="logout">Logout</li></button>
+			<button class="logout-button"><li class="logout">Logout</li></button> 
 		{{else}}	
 			<li class="login-toggle">Login/Sign-up</li>
 		{{/if}}
 	</ul>
 	</header>
 </template>
+
+<!-- eventually need to get rid of the  -->
 	

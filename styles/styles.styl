@@ -83,7 +83,7 @@ header
     padding 20px 
     fixed top left
     width 100%
-    height 70px  
+    height 100px  
     z-index: z.header
     shadow-level(2)
     clearfix()
@@ -212,7 +212,17 @@ p
     &.logout-button
         position absolute
         right 0
-        color #FCB514
+        color #000
+        background #FCB514
+        border solid 2px #FFF
+        padding 10px 30px 7px
+        letter-spacing 1px
+        &:hover
+            shadow-level(2)
+            color #FFF
+            background #FCB514
+            border solid 2px black
+            opacity 1
 
 input, select, textarea
     color purp
