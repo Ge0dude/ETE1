@@ -22,6 +22,7 @@ shell-server@0.2.1            # Server-side component of the `meteor shell` comm
 
 aldeed:collection2
 aldeed:autoform
+aldeed:template-extension
 kadira:flow-router
 kadira:blaze-layout
 erasaur:meteor-lodash
