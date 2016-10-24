@@ -1,1 +1,1 @@
-Template['override-atPwdFormBtn'].replaces('atPWdFormBtn');
+Template['override-atPwdFormBtn'].replaces('atPwdFormBtn')
